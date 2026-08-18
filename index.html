@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ============================================================= -->
+    <!-- PAGE TITLE  →  replace with your name                          -->
+    <!-- ============================================================= -->
+    <title>Elia Rühle</title>
+
+    <!-- META  →  update author + description (used by search engines) -->
+    <meta charset="utf-8">
+    <meta name="author" content="Elia Rühle">
+    <meta name="description" content="Elia Rühle is a Computer Science M.Sc. student at TU Dresden researching representation learning, world models, embodied AI, and robotics.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- FONTS + ICON LIBRARIES (loaded from CDNs) -->
+    <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css" />
+
+    <style type="text/css">
+        /* ============================================================= */
+        /* THEME  →  change the accent color here to re-skin the whole   */
+        /* site. Try: saddlebrown, #1b3a5b (navy), #14532d (green), etc. */
+        /* ============================================================= */
+        :root {
+            --accent: saddlebrown;
+            --accent-soft: rgb(223 182 139 / 56%);
+            --accent-chip: #dcccb344;
+            --page-bg: #fff9ee29;
+        }
+
+        @-ms-viewport { width: device-width; }
+
+        html, body {
+            margin: 0px;
+            padding: 0px;
+            width: 90%;
+            margin: auto;
+            font-size: 14.5px;
+            background: var(--page-bg);
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        ul { list-style-type: disc; padding: 0px; }
+
+        li {
+            margin-bottom: 30px;
+            background: white;
+            padding: 5px;
+            border-radius: 0px;
+            border: 1.3px solid var(--accent);
+        }
+
+        li > .noborder { border: 0px; }
+        li > .flex-container > .flex-item-left > b { font-size: 14px; color: var(--accent); }
+        li > .flex-container > .flex-item-left > span { color: var(--accent); }
+        li:last-child { margin-bottom: 0px; }
+
+        a { color: black; text-decoration: none; }
+
+        h1.name, h4.email { color: var(--accent); }
+
+        .full {
+            height: 100%;
+            width: 100%;
+            background-color: rgba(250, 240, 214, 0.103);
+            position: relative;
+            margin: auto;
+        }
+
+        .box-main {
+            width: 95%;
+            max-width: 900px;
+            margin: auto;
+            border-radius: 0px;
+            position: absolute;
+            top: 0; bottom: 0; left: 0; right: 0;
+        }
+
+        .box-left { width: auto; text-align: left; margin-top: 2px; padding: 10px; }
+        .box-right { text-align: left; margin-top: 0px; padding: 0px; width: 100%; display: flex; justify-content: left; }
+        .box-top { text-align: left; margin-top: 20px; padding: 0px; width: 100%; display: flex; justify-content: right; font-size: 17px; }
+
+        .portrait {
+            border-radius: 0px;
+            max-height: 215px;
+            min-height: 120px;
+            margin-top: 20px;
+            box-shadow: 0.5em 0.5em 1em rgb(201 169 104 / 64%);
+            margin-left: 10px;
+        }
+
+        .highlight { border-radius: 0px; color: black; }
+        .highlight-company { border-radius: 0px; font-weight: 600; color: var(--accent); }
+
+        .academic-link-box {
+            color: var(--accent);
+            margin: 10px 0px 0px 8px;
+            padding: 6px 10px 6px 10px;
+            float: left;
+            background: white;
+            border-radius: 0px;
+            border: 1.5px solid var(--accent);
+        }
+        .academic-link-box > a { color: var(--accent); }
+        .academic-link-box:hover { background: var(--accent-soft); }
+
+        .research { margin-top: 30px; text-align: left; justify-content: center; }
+        .research-br { display: block; content: ""; margin: 12px 0; }
+        .research-item-img { width: 300px; max-width: 95%; max-height: 200px; margin: auto; display: block; }
+
+        .b-personal { color: black !important; font-weight: 600; text-decoration: underline; }
+        .b-color { color: rgb(143, 64, 11); }
+        .li-talks { padding: 10px; }
+
+        .box-interest {
+            padding: 0px 5px;
+            margin: 4px 10px;
+            border-radius: 0px;
+            border-left: 0px solid rgb(2 34 122 / 82%);
+        }
+
+        .a-paper {
+            color: var(--accent);
+            padding: 2px 5px;
+            margin: 5px 3px 0px 0px;
+            border: 1px solid var(--accent);
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .a-paper:hover { background: var(--accent-soft); }
+
+        .paper-title { color: var(--accent); font-size: 15px; }
+
+        .box-topic { margin-top: 25px; }
+        .box-item-topic {
+            padding: 3px 7px;
+            margin: 5px 5px 0px 0px;
+            background: var(--accent-chip);
+            border-radius: 0px;
+            color: var(--accent);
+            font-size: 13px;
+        }
+
+        .positions {
+            margin: 0px 0px 5px 20px;
+            background: none;
+            padding: 0px;
+            border-radius: 0px;
+            box-shadow: none;
+            border: 0px !important;
+        }
+
+        .navigaton-link { padding: 10px; font-weight: 900; color: var(--accent); }
+        .navigaton-link:hover { text-decoration: underline; }
+
+        .li-container { display: block; background: white; }
+
+        * { box-sizing: border-box; }
+
+        .flex-box { display: flex; flex-wrap: wrap; text-align: left; justify-content: left; margin-top: 20px; }
+        .flex-container { display: flex; flex-wrap: wrap; text-align: left; }
+        .flex-item-left { padding: 10px; flex: 60%; font-size: 14.5px; }
+        .flex-item-right { padding: 10px; flex: 30%; }
+
+        /* Responsive: collapse to a single column on narrow screens */
+        @media (max-width: 800px) {
+            .flex-item-right, .flex-item-left { flex: 100%; }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .academic-link-box { width: 80%; margin: auto; text-align: center; }
+            .box-interest { width: 80%; text-align: center; margin: auto; }
+            .flex-item-right { padding: 10px; flex: 100%; justify-content: center; display: flex; }
+            .flex-item-left { padding: 10px; flex: 60%; text-align: center; justify-content: center; }
+            .flex-box { display: flex; flex-wrap: wrap; justify-content: center; margin-top: 20px; text-align: center; }
+            .a-paper { margin-top: 20px; }
+        }
+    </style>
+
+    <!-- ============================================================= -->
+    <!-- OPTIONAL: Google Analytics. Paste your own snippet here, or   -->
+    <!-- leave this commented out.                                     -->
+    <!-- ============================================================= -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'YOUR_GA_ID');
+    </script>
+    -->
+</head>
+
+<body>
+    <div class="full">
+        <div class="box-main">
+
+            <!-- ===================== TOP NAVIGATION ===================== -->
+            <div class="box-top">
+                <a class="navigaton-link" href="#about">About</a>
+                <a class="navigaton-link" href="#projects">Research</a>
+            </div>
+
+            <!-- ===================== PORTRAIT ===================== -->
+            <!-- Add a photo named portrait.png to the repo root (or change the src). -->
+            <div class="box-right" id="about">
+                <img class="portrait" src="img/portrait.JPG" alt="Elia Rühle">
+            </div>
+
+            <!-- ===================== ABOUT / INTRO ===================== -->
+            <div class="box-left">
+                <h1 class="name">Elia Rühle</h1>
+                <p>
+                    I am an M.Sc. student in Computer Science at
+                    <a class="highlight-company" href="https://tu-dresden.de/">TU&nbsp;Dresden</a>, working with <a class="highlight-company" href="https://www.linkedin.com/in/rcalandra/">Roberto&nbsp;Calandra</a> in the <a class="highlight-company" href="https://lasr.org/">Learning, Adaptive Systems and Robotics (LASR) Lab</a>. 
+                    I also did my B.Sc. in computer science and mathematics at TU Dresden, where I focused on AI for robotic manipulation supervised by <a class="highlight-company" href="https://www.linkedin.com/in/rcalandra/">Roberto&nbsp;Calandra</a>.
+                </p>
+                <p>
+                    My current research focuses on understanding how intelligent systems can learn meaningful latent representations from interaction with the world. Thereby I focus on analyzing how the learned representations support planning, decision making and generalization.
+                    In the long term I want to understand how hierarchical abstraction can emerge across different temporal and semantic scales by learning from multimodal sensory streams in a self-supervised manner.
+                    I believe that achieving this goal requires a deeper understanding of how current models work, what they represent internally, and which properties of learned representations make them genuinely useful, particularly for hierarchical reasoning. Thus I recently became more interested in mechanistic interpretability of deep neural networks.
+                </p>
+                <p>
+                    During my studies I worked on a bunch of topics closely related to artificial intelligence or robotics (or both). For an overview of my activities have a look at my CV and the research project section.
+                </p>
+                <p>
+                    I am always keen to talk about science and important questions of our time. If you want to collaborate with me or just want to have a chat about topics in my area of research, feel free to reach out via one of the channels below.
+                </p>
+
+                <!-- ===================== LINKS ROW ===================== -->
+                <!-- Each box is a link. Delete the ones you don't use; the icons come -->
+                <!-- from Font Awesome (fa-*) and Academicons (ai ai-*).               -->
+                <div class="flex-box">
+                    <!-- Google Scholar (commented out — uncomment and set your URL to show it):
+                    <div class="academic-link-box" onclick="location.href='https://scholar.google.com/'" style="cursor:pointer">
+                        <a class="academic-link" href="https://scholar.google.com/">Google Scholar <i class="ai ai-google-scholar-square"></i></a>
+                    </div>
+                    -->
+                    <div class="academic-link-box" onclick="location.href='https://github.com/eliaruehle'" style="cursor:pointer">
+                        <a class="academic-link" href="https://github.com/eliaruehle">GitHub <i class="fa fa-github"></i></a>
+                    </div>
+                    <div class="academic-link-box" onclick="location.href='https://www.linkedin.com/in/elia-ruehle2104/'" style="cursor:pointer">
+                        <a class="academic-link" href="https://www.linkedin.com/in/elia-ruehle2104/">LinkedIn <i class="fa fa-linkedin"></i></a>
+                    </div>
+                    <div class="academic-link-box" onclick="location.href='mailto:elia.ruehle@gmail.com'" style="cursor:pointer">
+                        <a class="academic-link" href="mailto:elia.ruehle@gmail.com">Email <i class="fa fa-envelope"></i></a>
+                    </div>
+                    <!-- CV: put your CV.pdf in the repo root -->
+                    <div class="academic-link-box" onclick="location.href='cv_elia_website.pdf'" style="cursor:pointer">
+                        <a class="academic-link" href="cv_elia_website.pdf">CV <i class="fa fa-file"></i></a>
+                    </div>
+                </div>
+
+                <!-- ===================== FIELDS OF INTEREST ===================== -->
+                <div class="research">
+                    <h2 style="margin-top:40px">Fields of Interest</h2>
+                    <div class="flex-box">
+                        <span class="box-interest">Representation Learning</span>
+                        <span class="box-interest">World Models</span>
+                        <span class="box-interest">Embodied AI</span>
+                        <span class="box-interest">Algorithmic AI</span>
+                        <span class="box-interest">Mechanistic Interpretability</span>
+                    </div>
+                </div>
+
+                <!-- ===================== PROJECTS / PUBLICATIONS ===================== -->
+                <!-- Rename "Projects" to "Research", "Publications", etc. as you like.  -->
+                <!-- Copy a whole <li class="li-container"> block to add another entry.  -->
+                <div class="research" id="projects">
+                    <h2 style="margin-top:40px">Selected Research Projects</h2>
+                    <ul>
+                        <li class="li-container">
+                            <div class="flex-container">
+                                <div class="flex-item-left">
+                                    <b class="paper-title">Plan to Explore using Diffusion Models</b><br class="research-br">
+                                    <b class="b-personal">Elia Rühle</b>, Johannes Busch, Roberto Calandra<br class="research-br">
+                                    <!-- Save the report PDF at docs/join-order-selection.pdf; set the Code URL below. -->
+                                    <br class="research-br"><br>
+                                    <a class="a-paper" href="https://github.com/lasr-lab/curious_exploration">Code</a>
+                                    <a class="a-paper" href="https://drive.google.com/file/d/1ZhxSkDdqgTGhIUjNRWxTdlPc96pRndFu/view?usp=sharing">Slides</a>
+                                    <div class="box-topic flex-box">
+                                        <div class="box-item-topic">Reinforcement Learning</div>
+                                        <div class="box-item-topic">Diffusion</div>
+                                        <div class="box-item-topic">Planning</div>
+                                    </div>
+                                </div>
+                                <div class="flex-item-right">
+                                    <img src="img/diffusion.png" class="research-item-img" alt="Project thumbnail" style="width:auto; height:140px;">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="li-container">
+                            <div class="flex-container">
+                                <div class="flex-item-left">
+                                    <b class="paper-title">Join Order Selection using Cardinalities and Reinforcement Learning</b><br class="research-br">
+                                    Anna-Maria Bothin*, <b class="b-personal">Elia Rühle*</b>, Julius Gonsior, Wolfgang Lehner<br class="research-br">
+                                    <!-- Save the report PDF at docs/join-order-selection.pdf; set the Code URL below. -->
+                                     <br class="research-br"><br>
+                                    <a class="a-paper" href="https://github.com/Annibth/Database_Project">Code</a>
+                                    <a class="a-paper" href="https://drive.google.com/file/d/1EIL7xuhBcTaxaecDsTAjEq253toWNE5l/view?usp=sharing">Slides</a>
+                                    <div class="box-topic flex-box">
+                                        <div class="box-item-topic">Reinforcement Learning</div>
+                                        <div class="box-item-topic">Query Optimization</div>
+                                    </div>
+                                </div>
+                                <div class="flex-item-right" style="display:flex; align-items:center;">
+                                    <img src="img/rl.png" class="research-item-img" alt="Project thumbnail">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="li-container">
+                            <div class="flex-container">
+                                <div class="flex-item-left">
+                                    <b class="paper-title">Decoding Emotions: Learning Feelings from Textual Data</b><br class="research-br">
+                                    <b class="b-personal">Elia Rühle</b>, Simon Crämer, Charles Krüger, Michael Färber, Simon Razniewski<br class="research-br">
+                                    <br class="research-br"><br>
+                                    <!-- Save the report PDF at docs/decoding-emotions.pdf; set the Code URL below. -->
+                                    <a class="a-paper" href="docs/llm_report.pdf">Report</a>
+                                    <a class="a-paper" href="https://github.com/kruegercharles/LLM-SemEval">Code</a>
+                                    <div class="box-topic flex-box">
+                                        <div class="box-item-topic">XAI</div>
+                                        <div class="box-item-topic">Transformers</div>
+                                        <div class="box-item-topic">Language Modelling</div>
+                                    </div>
+                                </div>
+                                <div class="flex-item-right">
+                                    <img src="img/llm.png" class="research-item-img" alt="Project thumbnail">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="li-container">
+                            <div class="flex-container">
+                                <div class="flex-item-left">
+                                    <b class="paper-title">Learning Grasp-Stability with Multi-Finger-Hands and Touch in Simulation</b><br class="research-br">
+                                    <b class="b-personal">Elia Rühle</b>, Roberto Calandra<br class="research-br">
+                                    <br class="research-br"><br>
+                                    <!-- Save the report PDF at docs/decoding-emotions.pdf; set the Code URL below. -->
+                                    <a class="a-paper" href="docs/bsc.pdf">Thesis</a>
+                                    <a class="a-paper" href="docs/poster_final.pdf">Poster</a>
+                                    <a class="a-paper" href="https://github.com/lasr-lab/thesis-elia-ruehle">Code</a>
+                                    <div class="box-topic flex-box">
+                                        <div class="box-item-topic">Robot Learning</div>
+                                        <div class="box-item-topic">Grasping</div>
+                                        <div class="box-item-topic">Touch Sensing</div>
+                                    </div>
+                                </div>
+                                <div class="flex-item-right">
+                                    <img src="img/overview.svg" class="research-item-img" alt="Project thumbnail">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="li-container">
+                            <div class="flex-container">
+                                <div class="flex-item-left">
+                                    <b class="paper-title">Unveiling Active Learning Strategies: Similarities, Applicability to Unlabeled Data and Influence of Initial Performance</b><br class="research-br">
+                                    <b class="b-personal">Elia Rühle</b>, Vincent Melisch, Tony Ray Marx, Wilhelm Pertsch, Anna Lopatkina, Paul Böse, Julius Gonsior, Anja Reusch, Wolfgang Lehner<br class="research-br">
+                                    <br class="research-br"><br>
+                                    <!-- Save the report PDF at docs/active-learning-strategies.pdf; set the Code URL below. -->
+                                    <a class="a-paper" href="docs/al_report.pdf">Report</a>
+                                    <a class="a-paper" href="https://github.com/eliaruehle/Data-Mining">Code</a>
+                                    <div class="box-topic flex-box">
+                                        <div class="box-item-topic">Active Learning</div>
+                                        <div class="box-item-topic">Machine Learning</div>
+                                    </div>
+                                </div>
+                                <div class="flex-item-right">
+                                    <img src="img/al.png" class="research-item-img" alt="Project thumbnail">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- ===================== BLOG / LOG (optional) =====================
+                     Placeholder writing section — uncomment when you publish a post,
+                     and re-add a "Blog" link to the top navigation.
+                <div class="research" id="blog">
+                    <h2 style="margin-top:40px">Blog</h2>
+                    Optional intro line for your writing.
+                    <ul>
+                        <li class="li-container">
+                            <div class="flex-container">
+                                <div class="flex-item-left">
+                                    <b><a class="paper-title" href="blog/example-post.html">Post Title</a></b><br class="research-br">
+                                    Short description or "Coming soon".
+                                </div>
+                                <div class="flex-item-right">
+                                    <img src="img/placeholder.svg" class="research-item-img" alt="Post thumbnail">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                -->
+
+                <!-- ===================== FOOTER ===================== -->
+                <div class="research">
+                    <br><br>
+                    <div style="height: 0.1px; text-align: left">
+                        <span style="background-color: white; position: relative; top: -0.5em; padding:10px; color: black;">
+                            <b>Last Updated:</b> August, 2026
+                        </span>
+                    </div>
+                    <br><br>
+                    <p style="color: black;">
+                        A big shoutout to <a class="highlight-company" href="https://jovoswald.github.io/">Johannes von Oswald</a>
+                        and <a class="highlight-company" href="https://ninodimontalcino.github.io/">Nino Scherrer</a>
+                        for the website design, which I adapted from them.
+                    </p>
+                    <br><br>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
